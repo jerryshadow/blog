@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hello World | 鹰眼的blog</title>
+  <title>nmcli常用命令 | 鹰眼的blog</title>
   <meta name="keywords" content="">
-  <meta name="description" content="Hello World | 鹰眼的blog">
+  <meta name="description" content="nmcli常用命令 | 鹰眼的blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="一名来自深职院的菜鸟">
 <meta property="og:type" content="website">
@@ -320,19 +320,27 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-nmcli常用命令" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">Hello World</h1>
+        <h1 class="article-title">nmcli常用命令</h1>
     
     <div class="article-meta">
         
         
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Linux">Linux</a>
+            
+        </span>
         
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-11-12 00:33:29'>2022-11-12 00:33</time>
+            发布时间 : <time class="date" title='最后更新: 2022-11-12 11:44:41'>2022-11-12 11:37</time>
         
     </div>
     <div class="article-meta">
@@ -354,7 +362,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%BF%9E%E6%8E%A5"><span class="toc-text">创建连接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E9%9D%99%E6%80%81ip%E5%9C%B0%E5%9D%80%E8%BF%9E%E6%8E%A5"><span class="toc-text">创建静态ip地址连接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9IP%E5%9C%B0%E5%9D%80"><span class="toc-text">修改IP地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEDNS"><span class="toc-text">配置DNS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%93%8D%E4%BD%9C"><span class="toc-text">其他操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E7%BD%91%E5%8D%A1%E9%85%8D%E7%BD%AE"><span class="toc-text">查看网卡配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%8B%E9%9A%86%E8%BF%9E%E6%8E%A5"><span class="toc-text">克隆连接</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BD%91%E5%8D%A1%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-text">网卡配置文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#nmcli%E4%B8%8E%E7%BD%91%E5%8D%A1%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E4%B8%8D%E7%AC%A6"><span class="toc-text">nmcli与网卡配置文件内容不符</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -370,19 +378,43 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;
+        <h2 id="创建连接"><a href="#创建连接" class="headerlink" title="创建连接"></a>创建连接</h2><p>创建动态获取ip地址的连接,con-name是创建连接的名字，ifname是物理设备，网络接口</p>
+<pre><code class="shell">[root@Centos8-arm ~]# nmcli con add type eth con-name dhcp-ens192 ifname ens192
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server
+<h2 id="创建静态ip地址连接"><a href="#创建静态ip地址连接" class="headerlink" title="创建静态ip地址连接"></a>创建静态ip地址连接</h2><pre><code class="shell">[root@Centos8-arm ~]# nmcli con add type eth con-name manual-ens33 ifname ens33 ip.method manual ip4 192.168.200.50/24 gw4 192.168.200.2 autoconnect yes
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate
+<p>PS：创建连接的意思，相当于在&#x2F;etc&#x2F;sysconfig&#x2F;network-scripts&#x2F;目录下创建了一个ifcfg-${con-name}文件，创建多个连接，则会同时创建多个文件。</p>
+<p> </p>
+<h3 id="修改IP地址"><a href="#修改IP地址" class="headerlink" title="修改IP地址"></a>修改IP地址</h3><pre><code class="shell">[root@Centos8-arm ~]# nmcli c mod manual-ens33 ip4 10.0.0.13/24
+
+[root@Centos8-arm ~]# nmcli c up manual-ens33
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy
+<h3 id="配置DNS"><a href="#配置DNS" class="headerlink" title="配置DNS"></a>配置DNS</h3><pre><code class="shell">[root@Centos8-arm ~]# nmcli con mod manual-ens33 ipv4.dns 114.114.114.114
+
+# 添加新的dns
+[root@Centos8-arm ~]# nmcli con mod manual-ens33 +ipv4.dns 8.8.8.8
 </code></pre>
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h2><h3 id="查看网卡配置"><a href="#查看网卡配置" class="headerlink" title="查看网卡配置"></a>查看网卡配置</h3><pre><code class="Shell">[root@Centos8-arm ~]# nmcli -f IP4 connection show ext
+IP4.ADDRESS[1]:                         10.1.24.10/24
+IP4.GATEWAY:                            10.1.24.1
+IP4.ROUTE[1]:                           dst = 10.1.24.0/24, nh = 0.0.0.0, mt = 100
+IP4.ROUTE[2]:                           dst = 0.0.0.0/0, nh = 10.1.24.1, mt = 100
+</code></pre>
+<h3 id="克隆连接"><a href="#克隆连接" class="headerlink" title="克隆连接"></a>克隆连接</h3><pre><code class="Shell">[root@Centos8-arm ~]# nmcli con clone ext ext1
+</code></pre>
+<h2 id="网卡配置文件"><a href="#网卡配置文件" class="headerlink" title="网卡配置文件"></a>网卡配置文件</h2><p>网卡配置文件所需内容：</p>
+<pre><code class="Shell">TYPE=&quot;Ethernet&quot;
+DEVICE=&quot;enp0s8&quot;
+BOOTPROTO=&quot;static&quot;
+ONBOOT=&quot;yes&quot;
+NAME=&quot;enp0s8&quot;
+IPADDR=&quot;192.168.1.91&quot;
+PREFIX=&quot;24&quot;
+GATEWAY=&quot;192.168.1.1&quot;
+DNS1=&quot;4.2.2.2&quot;
+</code></pre>
+<h2 id="nmcli与网卡配置文件内容不符"><a href="#nmcli与网卡配置文件内容不符" class="headerlink" title="nmcli与网卡配置文件内容不符"></a>nmcli与网卡配置文件内容不符</h2><p>如果发现网卡配置文件中配置的是正确的，但是<code>nmcli con show</code> 配置   发现内容是错误的，那就使用 <code>nmcli con reload</code> 从网卡配置文件中重新加载配置即可。</p>
+<p>如果还是没办法加载，可以在reload后面加上文件的绝对路径。</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 jaytp@qq.com </span>
