@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>鹰眼的blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="鹰眼的blog">
+  <title>麒麟桌面版开启ssh并允许root远程登陆 | 鹰眼的blog</title>
+  <meta name="keywords" content=" KylinOS ">
+  <meta name="description" content="麒麟桌面版开启ssh并允许root远程登陆 | 鹰眼的blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="04年的，目前就读于深圳职业技术学院。技术垫底，文化课也垫底，总之啥也不是。 QQ：1648574339email：&amp;#x73;&amp;#x68;&amp;#x61;&amp;#100;&amp;#x6f;&amp;#119;&amp;#121;&amp;#105;&amp;#110;&amp;#x67;&amp;#121;&amp;#97;&amp;#x6e;&amp;#x40;&amp;#102;&amp;#x6f;&amp;#x78;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;&amp;">
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -340,12 +340,58 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-麒麟桌面版开启ssh并允许root远程登陆" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E"><span class="toc-text">关于</span></a></li></ol>
+        <h1 class="article-title">麒麟桌面版开启ssh并允许root远程登陆</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Linux">Linux</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color3">KylinOS</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2022-11-15 18:01:12'>2022-11-15 17:53</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%90%AFssh"><span class="toc-text">开启ssh</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%81%E8%AE%B8root%E7%99%BB%E9%99%86"><span class="toc-text">允许root登陆</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -358,19 +404,34 @@
     }
 </style>
 </div>
-            <h1 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h1><p>这是一个来自深职院的学渣的blog。</p>
-<p>如果文章对您有用就给我打赏瓶冰可乐叭～。</p>
-<hr>
-<p>QQ：1648574339</p>
-<p>email：<a href="mailto:&#115;&#x68;&#x61;&#x64;&#111;&#119;&#x79;&#105;&#110;&#103;&#121;&#x61;&#110;&#64;&#x66;&#x6f;&#x78;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109;">&#115;&#x68;&#x61;&#x64;&#111;&#119;&#x79;&#105;&#110;&#103;&#121;&#x61;&#110;&#64;&#x66;&#x6f;&#x78;&#109;&#x61;&#x69;&#108;&#x2e;&#99;&#111;&#109;</a></p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="开启ssh"><a href="#开启ssh" class="headerlink" title="开启ssh"></a>开启ssh</h2><pre><code class="bash">[root@Centos8-arm ~]# systemctl start ssh
+</code></pre>
+<h2 id="允许root登陆"><a href="#允许root登陆" class="headerlink" title="允许root登陆"></a>允许root登陆</h2><p><code>/etc/ssh/sshd_config</code>找到<code>#PermitRootLogin  yes</code>取消注释。</p>
+<p>重启ssh服务。</p>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达。可以邮件至 shadowyingyan@foxmail.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -379,11 +440,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>
