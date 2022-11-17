@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>about | 鹰眼的blog</title>
+  <title>iSCSI协议共享文件 | 鹰眼的blog</title>
   <meta name="keywords" content="">
-  <meta name="description" content="about | 鹰眼的blog">
+  <meta name="description" content="iSCSI协议共享文件 | 鹰眼的blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="04年的，目前就读于深圳职业技术学院。技术垫底，文化课也垫底，总之啥也不是。 QQ：1648574339email：&amp;#115;&amp;#x68;&amp;#x61;&amp;#x64;&amp;#x6f;&amp;#119;&amp;#x79;&amp;#x69;&amp;#x6e;&amp;#103;&amp;#121;&amp;#x61;&amp;#110;&amp;#x40;&amp;#102;&amp;#111;&amp;#x78;&amp;#x6d;&amp;#x61;&amp;#105;&amp;#108;&amp;#46;&amp;#99;&amp;#111;">
 <meta property="og:type" content="website">
@@ -365,19 +365,27 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <article id="post-iSCSI协议共享文件" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">about</h1>
+        <h1 class="article-title">iSCSI协议共享文件</h1>
     
     <div class="article-meta">
         
         
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Linux">Linux</a>
+            
+        </span>
         
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-11-15 00:41:25'>2022-11-12 00:43</time>
+            发布时间 : <time class="date" title='最后更新: 2022-11-18 01:21:03'>2022-11-17 23:37</time>
         
     </div>
     <div class="article-meta">
@@ -399,7 +407,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-text">配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E7%A1%AC%E7%9B%98"><span class="toc-text">添加硬盘</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAtarget"><span class="toc-text">创建target</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8ACL"><span class="toc-text">设置访问控制列表ACL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E6%9C%8D%E5%8A%A1%E7%AB%AF%E7%9B%91%E5%90%ACIP%E5%9C%B0%E5%9D%80%E5%92%8C%E7%AB%AF%E5%8F%A3%E5%8F%B7"><span class="toc-text">设置服务端监听IP地址和端口号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%9D%E5%AD%98%E9%80%80%E5%87%BA"><span class="toc-text">保存退出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BE%E9%80%9A%E9%98%B2%E7%81%AB%E5%A2%99"><span class="toc-text">放通防火墙</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%AE%BF%E9%97%AE"><span class="toc-text">客户端访问</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-1"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%90%8D%E7%A7%B0"><span class="toc-text">修改客户端名称</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%AB%E6%8F%8F%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">扫描服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">登录服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E5%8C%96-amp-%E6%8C%82%E8%BD%BD"><span class="toc-text">格式化&amp;挂载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD"><span class="toc-text">自动挂载</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%B8%E8%BD%BD%E8%AE%BE%E5%A4%87"><span class="toc-text">卸载设备</span></a></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -415,8 +423,126 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>04年的，目前就读于深圳职业技术学院。<br>技术垫底，文化课也垫底，总之啥也不是。</p>
-<p>QQ：1648574339<br>email：<a href="mailto:&#115;&#x68;&#x61;&#x64;&#x6f;&#119;&#x79;&#x69;&#x6e;&#103;&#121;&#x61;&#110;&#x40;&#102;&#111;&#x78;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;">&#115;&#x68;&#x61;&#x64;&#x6f;&#119;&#x79;&#x69;&#x6e;&#103;&#121;&#x61;&#110;&#x40;&#102;&#111;&#x78;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
+        <p>iSCSI技术在工作形式上分为服务端（target）与客户端（initiator）。iSCSI服务端即用于存放硬盘存储资源的服务器，它作为前面创建的RAID磁盘阵列的存储端，能够为用户提供可用的存储资源。iSCSI客户端则是用户使用的软件，用于访问远程服务端的存储资源。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code class="bash">[root@localhost ~]# yum install -y targetcli
+</code></pre>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>配置iSCSI服务端共享资源。targetcli是用于管理iSCSI服务端存储资源的专用配置命令，它能够提供类似于fdisk命令的交互式配置功能，将iSCSI共享资源的配置内容抽象成“目录”的形式，我们只需将各类配置信息填入到相应的“目录”中即可。这里的难点主要在于认识每个“参数目录”的作用。当把配置参数正确地填写到“目录”中后，iSCSI服务端也就可以提供共享资源服务了。</p>
+<pre><code class="bash">[root@linuxprobe ~]# targetcli
+targetcli shell version 2.1.fb49
+Copyright 2011-2013 by Datera, Inc and others.
+For help on commands, type &#39;help&#39;.
+
+/&gt; ls
+o- / ............................................................................ [...]
+  o- backstores ................................................................. [...]
+  | o- block ..................................................... [Storage Objects: 0]
+  | o- fileio .................................................... [Storage Objects: 0]
+  | o- pscsi ......................................................[Storage Objects: 0]
+  | o- ramdisk ................................................... [Storage Objects: 0]
+  o- iscsi ................................................................[Targets: 0]
+  o- loopback ............................................................ [Targets: 0]
+/&gt; 
+</code></pre>
+<p>在该界面中允许使用很多Linux命令，比如利用ls查看目录参数的结构，使用cd切换到不同的目录中。</p>
+<h3 id="添加硬盘"><a href="#添加硬盘" class="headerlink" title="添加硬盘"></a>添加硬盘</h3><p><code>/backstores/block</code>是iSCSI服务端配置共享设备的位置。我们需要把刚刚创建的RAID 5磁盘阵列md0文件加入到配置共享设备的“资源池”中，并将该文件重新命名为disk0，这样用户就不会知道是由服务器中的哪块硬盘来提供共享存储资源，而只会看到一个名为disk0的存储设备。</p>
+<pre><code class="bash">/&gt; cd /backstores/block 
+/backstores/block&gt; create disk0 /dev/md0
+Created block storage object disk0 using /dev/md0.
+/backstores/block&gt; cd /
+</code></pre>
+<h3 id="创建target"><a href="#创建target" class="headerlink" title="创建target"></a>创建target</h3><p>创建iSCSI target名称及配置共享资源。iSCSI target名称是由系统自动生成的，这是一串用于描述共享资源的唯一字符串。稍后用户在扫描iSCSI服务端时即可看到这个字符串，因此我们不需要记住它。</p>
+<pre><code class="bash">/iscsi&gt; create
+Created target iqn.2003-01.org.linux-iscsi.linuxprobe.x8664:sn.745b21d6cad5.
+Created TPG 1.
+Global pref auto_add_default_portal=true
+Created default portal listening on all IPs (0.0.0.0), port 3260.
+/iscsi&gt; ls
+o- iscsi ................................................................... [Targets: 1]
+  o- iqn.2003-01.org.linux-iscsi.linuxprobe.x8664:sn.745b21d6cad5 ............. [TPGs: 1]
+    o- tpg1 ...................................................... [no-gen-acls, no-auth]
+      o- acls ................................................................. [ACLs: 0]
+      o- luns ................................................................. [LUNs: 0]
+      o- portals ........................................................... [Portals: 1]
+        o- 0.0.0.0:3260 ............................................................ [OK]
+</code></pre>
+<p>❕在iSCSI自动生成的名称中，最后一个.为句号，不是名称中的一部分。</p>
+<p>系统在生成这个target名称后，还会在&#x2F;iscsi参数目录中创建一个与其字符串同名的新“目录”用来存放共享资源。我们需要把前面加入到iSCSI共享资源池中的硬盘设备添加到这个新目录中，这样用户在登录iSCSI服务端后，即可默认使用这硬盘设备提供的共享存储资源了。</p>
+<pre><code class="bash">/iscsi&gt; cd iqn.2003-01.org.linux-iscsi.linuxprobe.x8664:sn.745b21d6cad5/
+/iscsi/iqn.20....745b21d6cad5&gt; cd tpg1/luns 
+/iscsi/iqn.20...ad5/tpg1/luns&gt; create /backstores/block/disk0 
+Created LUN 0.
+</code></pre>
+<h3 id="设置访问控制列表ACL"><a href="#设置访问控制列表ACL" class="headerlink" title="设置访问控制列表ACL"></a>设置访问控制列表ACL</h3><p>设置访问控制列表（ACL）。iSCSI协议是通过客户端名称进行验证的。也就是说，用户在访问存储共享资源时不需要输入密码，只要iSCSI客户端的名称与服务端中设置的访问控制列表中某一名称条目一致即可，因此需要在iSCSI服务端的配置文件中写入一串能够验证用户信息的名称。acls参数目录用于存放能够访问iSCSI服务端共享存储资源的客户端名称。推荐在刚刚系统生成的iSCSI target后面追加上类似于:client的参数，这样既能保证客户端的名称具有唯一性，又非常便于管理和阅读：</p>
+<pre><code class="bash">/iscsi/iqn.20...ad5/tpg1/luns&gt; cd ..
+/iscsi/iqn.20...21d6cad5/tpg1&gt; cd acls 
+/iscsi/iqn.20...ad5/tpg1/acls&gt; create iqn.2003-01.org.linux-iscsi.linuxprobe.x8664:sn.745b21d6cad5:client
+Created Node ACL for iqn.2003-01.org.linux-iscsi.linuxprobe.x8664:sn.745b21d6cad5:client
+Created mapped LUN 0.
+</code></pre>
+<h3 id="设置服务端监听IP地址和端口号"><a href="#设置服务端监听IP地址和端口号" class="headerlink" title="设置服务端监听IP地址和端口号"></a>设置服务端监听IP地址和端口号</h3><p>位于生产环境中的服务器上可能有多块网卡，那么到底是由哪个网卡或IP地址对外提供共享存储资源呢？在配置文件中<strong>默认是允许所有网卡提供iSCSI服务</strong>，如果您认为这有些许不安全，可以手动删除：</p>
+<pre><code class="bash">/iscsi/iqn.20...ad5/tpg1/acls&gt; cd ../portals/
+/iscsi/iqn.20.../tpg1/portals&gt; ls
+o- portals ................................................................... [Portals: 1]
+  o- 0.0.0.0:3260 .................................................................... [OK]
+/iscsi/iqn.20.../tpg1/portals&gt; delete 0.0.0.0 3260
+Deleted network portal 0.0.0.0:3260
+</code></pre>
+<p>继续进行设置，使系统使用服务器IP地址192.168.10.10的3260端口向外提供iSCSI共享存储资源服务：</p>
+<pre><code class="bash">/iscsi/iqn.20.../tpg1/portals&gt; create 192.168.10.10
+Using default IP port 3260
+Created network portal 192.168.10.10:3260.
+</code></pre>
+<h3 id="保存退出"><a href="#保存退出" class="headerlink" title="保存退出"></a>保存退出</h3><p>在参数文件配置妥当后，浏览刚刚配置的信息，确保上述提到的“目录”都已经填写了正确的内容。在确认信息无误后输入<code>exit</code>命令退出配置。</p>
+<h3 id="放通防火墙"><a href="#放通防火墙" class="headerlink" title="放通防火墙"></a>放通防火墙</h3><p>清空iptables防火墙中的默认策略，设置firewalld防火墙，使其放行iSCSI服务或3260&#x2F;TCP端口号：</p>
+<pre><code class="bash">[root@linuxprobe ~]# iptables -F
+[root@linuxprobe ~]# iptables-save
+[root@linuxprobe ~]# firewall-cmd --permanent --add-port=3260/tcp 
+success
+[root@linuxprobe ~]# firewall-cmd --reload 
+success
+</code></pre>
+<h2 id="客户端访问"><a href="#客户端访问" class="headerlink" title="客户端访问"></a>客户端访问</h2><h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h3><pre><code class="bash">[root@kylin-server2 ~]# yum install iscsi-initiator-utils -y
+</code></pre>
+<h3 id="修改客户端名称"><a href="#修改客户端名称" class="headerlink" title="修改客户端名称"></a>修改客户端名称</h3><p>前面讲到，iSCSI协议是通过客户端的名称来进行验证的，而该名称也是iSCSI客户端的唯一标识，而且必须与服务端配置文件中访问控制列表中的信息一致，否则客户端在尝试访问存储共享设备时，系统会弹出验证失败的保存信息。</p>
+<p>下面编辑iSCSI客户端中的initiator名称文件，把服务端的访问控制列表名称填写进来，然后重启客户端iscsid服务程序并将其加入到开机启动项中：</p>
+<pre><code class="bash">[root@linuxprobe ~]# vim /etc/iscsi/initiatorname.iscsi 
+InitiatorName=iqn.2003-01.org.linux-iscsi.linuxprobe.x8664:sn.745b21d6cad5:client
+[root@linuxprobe ~]# systemctl restart iscsid
+[root@linuxprobe ~]# systemctl enable iscsid
+Created symlink /etc/systemd/system/multi-user.target.wants/iscsid.service → /usr/lib/systemd/system/iscsid.service.
+</code></pre>
+<h3 id="扫描服务器"><a href="#扫描服务器" class="headerlink" title="扫描服务器"></a>扫描服务器</h3><p>iscsiadm是用于管理、查询、插入、更新或删除iSCSI数据库配置文件的命令行工具，用户需要先使用这个工具扫描发现远程iSCSI服务端，然后查看找到的服务端上有哪些可用的共享存储资源。其中，-m discovery参数的目的是扫描并发现可用的存储资源，-t st参数为执行扫描操作的类型，-p 192.168.10.10参数为iSCSI服务端的IP地址：</p>
+<pre><code class="bash">[root@linuxprobe ~]# iscsiadm -m discovery -t st -p 192.168.10.10
+192.168.10.10:3260,1 iqn.2003-01.org.linux-iscsi.linuxprobe.x8664:sn.745b21d6cad5
+</code></pre>
+<h3 id="登录服务器"><a href="#登录服务器" class="headerlink" title="登录服务器"></a>登录服务器</h3><p>在使用iscsiadm命令发现了远程服务器上可用的存储资源后，接下来准备登录iSCSI服务端。其中，-m node参数为将客户端所在主机作为一台节点服务器，-T参数为要使用的存储资源（大家可以直接复制前面命令中扫描发现的结果，以免录入错误），-p 192.168.10.10参数依然为对方iSCSI服务端的IP地址。最后使用–login或-l参数进行登录验证。</p>
+<pre><code class="bash">[root@linuxprobe ~]# iscsiadm -m node -T iqn.2003-01.org.linux-iscsi.linuxprobe.x8664:sn.745b21d6cad5 -p 192.168.10.10 --login
+Logging in to [iface: default, target: iqn.2003-01.org.linux-iscsi.linuxprobe.x8664:sn.745b21d6cad5, portal: 192.168.10.10,3260] (multiple)
+Login to [iface: default, target: iqn.2003-01.org.linux-iscsi.linuxprobe.x8664:sn.745b21d6cad5, portal: 192.168.10.10,3260] successful.
+</code></pre>
+<p>在iSCSI客户端成功登录之后，会在客户端主机上多出一块名为&#x2F;dev&#x2F;sdb的设备文件。第6章曾经讲过，udev服务在命名硬盘名称时，与硬盘插槽是没有关系的。接下来便能够像使用本地主机上的硬盘那样来操作这个设备文件了。</p>
+<h3 id="格式化-amp-挂载"><a href="#格式化-amp-挂载" class="headerlink" title="格式化&amp;挂载"></a>格式化&amp;挂载</h3><pre><code class="bash">[root@linuxprobe ~]# mkfs.xfs /dev/sdb
+meta-data=/dev/sdb               isize=512    agcount=16, agsize=654720 blks
+         =                       sectsz=512   attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+         =                       reflink=1
+data     =                       bsize=4096   blocks=10475520, imaxpct=25
+         =                       sunit=128    swidth=256 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=5120, version=2
+         =                       sectsz=512   sunit=0 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+[root@linuxprobe ~]# mkdir /iscsi
+[root@linuxprobe ~]# mount /dev/sdb /iscsi/
+</code></pre>
+<h3 id="自动挂载"><a href="#自动挂载" class="headerlink" title="自动挂载"></a>自动挂载</h3><p>由于&#x2F;dev&#x2F;sdb是一块网络存储设备，而iSCSI协议是基于TCP&#x2F;IP网络传输数据的，因此必须在&#x2F;etc&#x2F;fstab配置文件中添加上_netdev参数，表示当系统联网后再进行挂载操作，以免系统开机时间过长或开机失败：</p>
+<pre><code class="bash">UUID=&quot;0937b4ec-bada-4a09-9f99-9113296ab72d&quot; /iscsi        xfs      defaults,_netdev   0 0 
+</code></pre>
+<h3 id="卸载设备"><a href="#卸载设备" class="headerlink" title="卸载设备"></a>卸载设备</h3><p>如果我们不再需要使用iSCSI共享设备资源了，可以用iscsiadm命令的-u参数将其设备卸载：</p>
+<pre><code class="bash">[root@linuxprobe ~]# iscsiadm -m node -T iqn.2003-01.org.linux-iscsi.linuxprobe.x8664:sn.745b21d6cad5 -u
+Logging out of session [sid: 1, target: iqn.2003-01.org.linux-iscsi.linuxprobe.x8664:sn.745b21d6cad5, portal: 192.168.10.10,3260]
+Logout of [sid: 1, target: iqn.2003-01.org.linux-iscsi.linuxprobe.x8664:sn.745b21d6cad5, portal: 192.168.10.10,3260] successful.
+</code></pre>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达。可以邮件至 shadowyingyan@foxmail.com </span>
