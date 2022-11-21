@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>麒麟ftp匿名共享 | 鹰眼的blog</title>
-  <meta name="keywords" content=" KylinOS ">
-  <meta name="description" content="麒麟ftp匿名共享 | 鹰眼的blog">
+  <title>mount出现结构需要清理的解决方案 | 鹰眼的blog</title>
+  <meta name="keywords" content=" 排错 ">
+  <meta name="description" content="mount出现结构需要清理的解决方案 | 鹰眼的blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="04年的，目前就读于深圳职业技术学院。技术垫底，文化课也垫底，总之啥也不是。 QQ：1648574339email：&amp;#115;&amp;#104;&amp;#x61;&amp;#100;&amp;#x6f;&amp;#x77;&amp;#x79;&amp;#x69;&amp;#x6e;&amp;#103;&amp;#121;&amp;#97;&amp;#110;&amp;#x40;&amp;#x66;&amp;#x6f;&amp;#120;&amp;#109;&amp;#97;&amp;#105;&amp;#x6c;&amp;#x2e;&amp;#99;&amp;#111;&amp;">
 <meta property="og:type" content="website">
@@ -374,9 +374,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-麒麟ftp匿名共享" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-mount出现结构需要清理的解决方案" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">麒麟ftp匿名共享</h1>
+        <h1 class="article-title">mount出现结构需要清理的解决方案</h1>
     
     <div class="article-meta">
         
@@ -394,14 +394,14 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color3">KylinOS</a>
+            <a class="color3">排错</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-11-17 10:16:37'>2022-11-17 09:59</time>
+            发布时间 : <time class="date" title='最后更新: 2022-11-18 15:31:53'>2022-11-18 15:30</time>
         
     </div>
     <div class="article-meta">
@@ -439,9 +439,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>与centos7有些许的不同，centos7中默认开启<code>anonymous_enable=YES</code></p>
-<p>麒麟中去配置文件中手动开启即可。</p>
-<p>然后添加上<code>anon_root=共享路径</code></p>
+        <p><code>fsck 磁盘路径</code></p>
+<p>全部确认输入“a”，回车</p>
+<p>再次使用mount 命名进行挂载,即可挂载成功</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达。可以邮件至 shadowyingyan@foxmail.com </span>
