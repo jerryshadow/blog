@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>鹰眼的blog</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="鹰眼的blog">
+  <title>使用docker部署MEMOS | 鹰眼的blog</title>
+  <meta name="keywords" content=" 没事玩玩 ">
+  <meta name="description" content="使用docker部署MEMOS | 鹰眼的blog">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="04年的，目前就读于深圳职业技术学院。技术垫底，文化课也垫底，总之啥也不是。 QQ：1648574339email：&amp;#115;&amp;#104;&amp;#x61;&amp;#x64;&amp;#x6f;&amp;#119;&amp;#x79;&amp;#x69;&amp;#110;&amp;#103;&amp;#x79;&amp;#97;&amp;#110;&amp;#x40;&amp;#102;&amp;#x6f;&amp;#120;&amp;#109;&amp;#x61;&amp;#105;&amp;#x6c;&amp;#x2e;&amp;#99;&amp;#111;">
 <meta property="og:type" content="website">
@@ -56,7 +56,7 @@
 
 
 <body>
-<aside class="nav mobile">
+<aside class="nav">
     <div class="nav-left">
         <a href="/"
    class="avatar_target">
@@ -426,12 +426,58 @@
         </div>
     </div>
 </aside>
-<div id="post" class="index">
+<div id="post">
     <div class="pjax">
-        <article class="index">
-            <div class="toc-ref">
+        <article id="post-使用docker部署MEMOS" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E"><span class="toc-text">关于</span></a></li></ol>
+        <h1 class="article-title">使用docker部署MEMOS</h1>
+    
+    <div class="article-meta">
+        
+        
+        
+        <span class="book">
+            <i class="iconfont icon-category"></i>
+            
+            
+            <a  data-rel="Docker">Docker</a>
+            
+        </span>
+        
+        
+        <span class="tag">
+            <i class="iconfont icon-tag"></i>
+            
+            <a class="color5">没事玩玩</a>
+            
+        </span>
+        
+    </div>
+    <div class="article-meta">
+        
+            发布时间 : <time class="date" title='最后更新: 2023-01-01 12:21:21'>2023-01-01 12:07</time>
+        
+    </div>
+    <div class="article-meta">
+        
+        
+        <span id="busuanzi_container_page_pv">
+            阅读 :<span id="busuanzi_value_page_pv">
+                <span class="count-comment">
+                    <span class="spinner">
+                      <div class="cube1"></div>
+                      <div class="cube2"></div>
+                    </span>
+                </span>
+            </span>
+        </span>
+        
+        
+    </div>
+    
+    <div class="toc-ref">
+    
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Docker%E9%83%A8%E7%BD%B2"><span class="toc-text">使用Docker部署</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -444,19 +490,36 @@
     }
 </style>
 </div>
-            <h1 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h1><p>这是一个来自深职院的学渣的blog。</p>
-<p>如果文章对您有用就给我打赏瓶冰可乐叭～。</p>
-<hr>
-<p>QQ：1648574339</p>
-<p>email：<a href="mailto:&#115;&#104;&#x61;&#100;&#x6f;&#119;&#121;&#x69;&#110;&#x67;&#121;&#x61;&#110;&#x40;&#x66;&#111;&#x78;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;">&#115;&#104;&#x61;&#100;&#x6f;&#119;&#121;&#x69;&#110;&#x67;&#121;&#x61;&#110;&#x40;&#x66;&#111;&#x78;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#111;&#x6d;</a></p>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>MEMOS是一个可以部署在Docker上的小型备忘录平台。</p>
+<p>你可以拿它做很多事情，记录一下要做的事情，或者生活中的趣事等等。它的好处就是，免费、易维护、安全、方便使用。</p>
+<h2 id="使用Docker部署"><a href="#使用Docker部署" class="headerlink" title="使用Docker部署"></a>使用Docker部署</h2><pre><code class="shell">docker run -d --name memos -p 9660:5230 -v /Users/shadowyingyan/Desktop/docker/memos/:/var/opt/memos neosmemo/memos:latest
+</code></pre>
+<p>指定容器名为memos，设置对外端口映射将容器内部5230端口映射到外部端口9660，设定映射目录将 <code>/Users/shadowyingyan/Desktop/docker/memos/</code>映射到容器内的 <code>/var/opt/memos</code>映射的目录请根据自己的设备情况进行配置。</p>
+<p>执行完毕后，如果没有报错现在去访问127.0.0.1:9660应该就可以看到MEMOS的登录界面了。</p>
 
-        </article>
-        
-        <p>
-            <a  class="dashang" onclick="dashangToggle()">赏</a>
-        </p>
-        
-        
+      
+       <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎指出任何有错误或不够清晰的表达。可以邮件至 shadowyingyan@foxmail.com </span>
+    </div>
+</article>
+
+
+<p>
+    <a  class="dashang" onclick="dashangToggle()">赏</a>
+</p>
+
+
+
+
+
+
+    
+
+
+
+
     </div>
     <div class="copyright">
         <p class="footer-entry">
@@ -465,11 +528,11 @@
 <p class="footer-entry">Built with <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/yelog/hexo-theme-3-hexo" target="_blank">3-hexo</a> theme</p>
 
     </div>
-</div>
-<div class="full-toc">
-    <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
+    <div class="full-toc">
+        <button class="full" data-title="切换全屏 快捷键 s"><span class="min "></span></button>
 <a class="" id="rocket" ></a>
 
+    </div>
 </div>
 
 <div class="hide_box" onclick="dashangToggle()"></div>
